@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [opened, closed]
 
+env:
+  SOME_GLOBAL_VAR: 1.0.0
+
 jobs:
   Discord:
     runs-on: ubuntu-latest
@@ -20,7 +23,7 @@ jobs:
           "fields": [
           { "name": "Pull Request #${{github.event.number}}", "value": "${{github.event.action}}" },
           { "name": "Merged", "value": "${{github.event.pull_request.merged}}" },
-          { "name": "Title", "value": "${{ github.event.pull_request.title }}" }
+          { "name": "Title", "value": "${{ env.SOME_GLOBAL_VAR }}" }
           ],
           "color":1127128,
           "timestamp": "${{github.event.head_commit.timestamp}}",
