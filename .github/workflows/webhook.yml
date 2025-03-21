@@ -11,7 +11,7 @@ jobs:
     steps:
     - env:
         DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1352504716579573795/yfbhnbwFrmX1AXa9OQdKTVBWAhwm_X6DP0yJyziWPG7gQiGHEk3OsvRPyA51ZYZXJeCD"
-        DISCORD_EMBEDS: '{"embeds": [{"title": "","description": "","color": 16711680,"footer": {"text": ""},"author": {"name": "Test"},"fields": []}],"content": ""}'
+        DISCORD_EMBEDS: '{"embeds": [{"title": "Hello!","description": "Hi! :grinning:"}]}'
       uses: Ilshidur/action-discord@0.3.2
       if: "${{ env.DISCORD_WEBHOOK != '' }}"
       with:
