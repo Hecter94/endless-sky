@@ -14,12 +14,14 @@ jobs:
           DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1352504716579573795/yfbhnbwFrmX1AXa9OQdKTVBWAhwm_X6DP0yJyziWPG7gQiGHEk3OsvRPyA51ZYZXJeCD"
           DISCORD_AVATAR: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png'
           DISCORD_USERNAME: 'GitHub'
+          PR_TITLE: ${{ github.event.pull_request.title }}
           DISCORD_EMBEDS: '[    { 
           "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },
           "url": "https://github.com/${{github.repository}}/commit/${{github.sha}}",
           "fields": [
           { "name": "Pull Request #${{github.event.number}}", "value": "${{github.event.action}}" },
           { "name": "Merged", "value": "${{github.event.pull_request.merged}}" }
+          { "name": "Title", "value": $TITLE }
           ],
           "color":1127128,
           "timestamp": "${{github.event.head_commit.timestamp}}",
