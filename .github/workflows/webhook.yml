@@ -7,31 +7,7 @@ jobs:
   Discord:
     runs-on: ubuntu-latest
     name: Discord Notifier
-    #if: "contains(github.event.head_commit.message, '[skip ci]')"
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # OR "2" -> To retrieve the preceding commit.
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v34
-        with:
-          separator: "----------------------"
-      - name: List all changed files
-        run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed"
-          done
-      - uses: benjlevesque/short-sha@v2.1
-        id: short-sha
-        with:
-          length: 7
-      - run: echo $SHA
-        env: 
-          SHA: ${{ steps.short-sha.outputs.sha }}
-      - run: echo $SHA
-        env: 
-          SHA: ${{ env.SHA }}
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1352504716579573795/yfbhnbwFrmX1AXa9OQdKTVBWAhwm_X6DP0yJyziWPG7gQiGHEk3OsvRPyA51ZYZXJeCD"
