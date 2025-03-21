@@ -16,9 +16,6 @@ jobs:
           DISCORD_USERNAME: 'GitHub'
           DISCORD_EMBEDS: '[    { 
           "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },
-          "description": "Pull request ${{github.event.action}}: #${{github.event.number}} ${{ github.event.pull_request.title }}"
+          "description": "[Pull request ${{github.event.action}}: #${{github.event.number}} ${{ github.event.pull_request.title }}](${{github.pull_request.html_url}})"
           }    ]'
         uses: Ilshidur/action-discord@master
-      - name: echo
-        run: | 
-          echo ${{github.event_name}}
