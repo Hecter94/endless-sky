@@ -20,7 +20,7 @@ jobs:
           "url": "https://github.com/${{github.repository}}/commit/${{github.sha}}",
           "fields": [
           { "name": "Pull Request #${{github.event.number}}", "value": "${{github.event.action}}" },
-          { "name": "Merged", "value": "${{github.event.pull_request.merged}}" }
+          { "name": "Merged", "value": "${{github.event.pull_request.merged}}" },
           { "name": "Title", "value": "$TITLE" }
           ],
           "color":1127128,
