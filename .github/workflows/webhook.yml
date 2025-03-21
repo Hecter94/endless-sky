@@ -18,12 +18,8 @@ jobs:
           "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },
           "url": "https://github.com/${{github.repository}}/commit/${{github.sha}}",
           "fields": [
-          { "name": "Repository", "value": "[${{github.event.repository.name}}](${{github.event.repository.clone_url}})", "inline": true },
-          { "name": "Branch", "value": "[${{github.ref_name}}](https://github.com/${{github.repository}}/tree/${{github.ref_name}})", "inline": true },
-          { "name": "Event", "value": "${{github.event_name}}", "inline": true },
-          { "name": "Job", "value": "${{github.job}}", "inline": true },
-          { "name": "Changed Files", "value": "${{ steps.changed-files.outputs.all_changed_files }}" },
-          { "name": "Author", "value": "[${{github.event.head_commit.author.name}}](https://github.com/${{github.actor}})" }
+          { "name": "Pull Request #${{github.event.number}}", "value": "${{github.event.action}}" },
+          { "name": "Merged", "value": "${{github.event.pull_request.merged}}" }
           ],
           "color":1127128,
           "timestamp": "${{github.event.head_commit.timestamp}}",
