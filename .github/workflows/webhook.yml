@@ -5,7 +5,7 @@ on:
     types: [opened, closed]
 
 env:
-  event_action: ${{ github.event.action == 'opened' && 'Opened' || ${{ github.event.pull_request.merged && 'Merged' || 'Closed' }} }}
+    event_action: ${{ github.event.action == 'opened' && 'Opened' || github.event.pull_request.merged && 'Merged' || 'Closed' }}
 
 jobs:
   Discord:
