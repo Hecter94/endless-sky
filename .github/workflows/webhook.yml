@@ -11,6 +11,6 @@ jobs:
     steps:
     - env:
         DISCORD_WEBHOOK: "https://discord.com/api/webhooks/1352504716579573795/yfbhnbwFrmX1AXa9OQdKTVBWAhwm_X6DP0yJyziWPG7gQiGHEk3OsvRPyA51ZYZXJeCD"
-        DISCORD_EMBEDS: '[{"author": { "name": "${{github.event.pusher.full_name}}", "icon_url": "${{github.event.pusher.avatar_url}}" }}]'
+        DISCORD_EMBEDS: '[{"author": {"icon_url": "https://i.ibb.co/QFThnKC0/test1.jpg","name": "Hecter"}}]'
       uses: Ilshidur/action-discord@0.3.2
       if: "${{ env.DISCORD_WEBHOOK != '' }}"
