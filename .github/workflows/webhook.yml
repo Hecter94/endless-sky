@@ -4,9 +4,6 @@ on:
   pull_request:
     types: [opened, closed]
 
-env:
-  TITLE: ${{ github.event.pull_request.title }}
-
 jobs:
   Discord:
     runs-on: ubuntu-latest
@@ -19,15 +16,7 @@ jobs:
           DISCORD_USERNAME: 'GitHub'
           DISCORD_EMBEDS: '[    { 
           "author": {  "icon_url": "https://avatars.githubusercontent.com/${{ github.actor }}", "name": "${{ github.actor }}", "url": "https://github.com/${{github.actor}}" },
-          "url": "https://github.com/${{github.repository}}/commit/${{github.sha}}",
-          "fields": [
-          { "name": "Pull Request #${{github.event.number}}", "value": "${{github.event.action}}" },
-          { "name": "Merged", "value": "${{github.event.pull_request.merged}}" },
-          { "name": "Title", "value": "${{ env.TITLE }}" }
-          ],
-          "color":1127128,
-          "timestamp": "${{github.event.head_commit.timestamp}}",
-          "footer":{"text": "${{github.event.head_commit.timestamp}}"}
+          "description":{"text": "Pull request ${{github.event.action}}: #${{github.event.number}} ${{ github.event.pull_request.title }}"}
           }    ]'
         uses: Ilshidur/action-discord@master
       - name: echo
