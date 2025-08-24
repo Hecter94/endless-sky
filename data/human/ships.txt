@@ -191,6 +191,32 @@ ship "Arrow"
 	description "The Arrow is a light transport, designed for bringing a small number of very rich passengers - Syndicate CEOs, for example - from one planet to another with speed and style. It makes up for its light armament by being able to outrun nearly every other ship in the sky."
 
 
+ship "Asteroid"
+	noun "asteroid"
+	sprite "asteroid/medium rock/spin"
+		"frame rate" 10
+	attributes
+		category "Unclassified"
+		"fuel capacity" 1
+		"hull" 10000
+		"mass" 1000
+		"drag" 10
+		"heat dissipation" .1
+		"required crew" 0
+		"automaton" 1
+		"bunks" 0
+		"thrust" 10
+		"turn" 100
+		"thrusting energy" 1
+		"turning energy" 1
+		"energy generation" 3
+		"inscrutable" 1
+	explode "small explosion" 25
+	explode "medium explosion" 35
+	explode "large explosion" 45
+	explode "huge explosion" 30
+
+
 
 ship "Auxiliary"
 	plural "Auxiliaries"
@@ -1571,6 +1597,45 @@ ship "Dropship"
 	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
 
 
+# Feel free to change this escape shuttle to a different ship once escape pod mechanics are implemented.
+ship "Emergency Shuttle"
+	sprite "ship/escape shuttle"
+	attributes
+		category "Utility"
+		"cost" 45000
+		"shields" 300
+		"hull" 600
+		"required crew" 1
+		"bunks" 10
+		"mass" 65
+		"drag" 1.7
+		"heat dissipation" .7
+		"fuel capacity" 100
+		"cargo space" 20
+		"outfit space" 39
+		"weapon capacity" 0
+		"engine capacity" 20
+		weapon
+			"blast radius" 9
+			"shield damage" 90
+			"hull damage" 45
+			"hit force" 135
+	outfits
+		"KP-6 Photovoltaic Panel" 2
+		"LP036a Battery Pack"
+		"Outfits Expansion"
+		
+		"X1050 Ion Engines"
+
+		"Hyperdrive"
+		
+	engine 0 26
+		zoom 1.4
+	leak "leak" 40 50
+	explode "tiny explosion" 5
+	explode "small explosion" 1
+	description "This Emergency Shuttle is custom-built, designed to be attached to a larger ship and to serve as a lifeboat if the need arises. It is intentionally designed to maximize the number of people it can carry to safety, but has very little space for outfits."
+
 
 ship "Enforcer"
 	sprite "ship/enforcer"
@@ -2067,6 +2132,31 @@ ship "Gunboat"
 	"final explode" "final explosion small"
 	description "The Navy Gunboat is designed for engaging targets at short range, and also serves as the Navy's mobile sensor platform, scanning ships for illegal equipment or cargo."
 
+
+
+ship "Hallucination"
+	noun "flower"
+	sprite "ship/hallucination"
+		"frame rate" 1
+		"random start frame"
+	"never disabled"
+	attributes
+		category "Unclassified"
+		"hull" 1000
+		"mass" 180
+		"drag" 2.1
+		"heat dissipation" .7
+		"fuel capacity" 100000
+		"jump fuel" 100
+		"jump speed" 1
+		"jump drive" 1
+		"automaton" 1
+		"thrust" 30
+		"turn" 500
+		"energy generation" 1
+	outfits
+		"Imaginary Weapon" 1
+	gun 0 0
 
 
 ship "Hauler"
@@ -3584,6 +3674,17 @@ ship "Scrapper"
 	explode "small explosion" 5
 	description "Rather than being a specific model of ship, the Scrappers are instead a family of vessels cobbled together from the remains of broken shuttles. On the rare occasion that Republic authorities bother to recognize their existence, Scrappers are treated as almost-illegal, patent-infringing death traps. Despite this, these ships are where many captains (and pirates) from poorer backgrounds get their start."
 
+
+ship "Science Drone"
+	sprite "ship/science drone"
+	attributes
+		category "Drone"
+		hull 200
+		mass 30
+		drag 2
+		"heat dissipation" 1
+	explode "tiny explosion" 5
+	explode "small explosion" 2
 
 
 ship "Shuttle"

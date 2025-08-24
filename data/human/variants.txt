@@ -3597,6 +3597,23 @@ ship "Vanguard" "Vanguard (Particle)"
 	gun "Particle Cannon"
 
 
+ship "Vanguard" "Vanguard (Plasma Slow)"
+	outfits
+		"Plasma Cannon" 7
+		"Heavy Anti-Missile Turret"
+		"Fusion Reactor"
+		Supercapacitor
+		"D14-RN Shield Generator"
+		"Fuel Pod" 5
+		"Small Radar Jammer" 2
+		"Interference Plating" 4
+		"Cargo Expansion" 3
+		"Laser Rifle" 11
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Scram Drive"
+
+
 
 ship "Wasp" "Wasp (Gatling)"
 	outfits

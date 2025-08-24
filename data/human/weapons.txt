@@ -806,6 +806,35 @@ effect "plasma explosion"
 	"random velocity" .1
 	"velocity scale" -.05
 
+outfit "Imaginary Weapon"
+	category "Guns"
+	"gun ports" -1
+	weapon
+		sprite "projectile/rainbow"
+			"frame rate" 12
+			"random start frame"
+		"hit effect" "puff"
+		"die effect" "puff"
+		"inaccuracy" 20
+		"velocity" 12
+		"lifetime" 60
+		"reload" 10
+		"acceleration" 1.2
+		"drag" .1
+		"turn" 3
+		"homing"
+			"leading"
+			"throttle control"
+		"tracking" 1.
+
+effect "puff"
+	sprite "effect/puff"
+		"no repeat"
+		"frame rate" 10
+	"lifetime" 20
+	"random angle" 360
+	"velocity scale" -.005
+
 
 outfit "Flamethrower"
 	category "Secondary Weapons"
